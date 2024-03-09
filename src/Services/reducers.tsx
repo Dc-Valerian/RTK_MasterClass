@@ -10,8 +10,8 @@ const reducers = createSlice({
   name: "counter",
   initialState,
   reducers: {
-    increment: (state) => {
-      state.count += 1;
+    increment: (state, { payload }) => {
+      state.count += payload;
     },
   },
 });
