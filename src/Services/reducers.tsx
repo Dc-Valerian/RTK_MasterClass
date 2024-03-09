@@ -1,18 +1,21 @@
 // WRITING PURE JAVASCRIPT FUNCTIONS
 
-
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-
-}
+  count: 0,
+};
 
 const reducers = createSlice({
-  name: second,
+  name: "counter",
   initialState,
-  reducers: {}
+  reducers: {
+    increment: (state) => {
+      state.count += 1;
+    },
+  },
 });
 
-export const {} = reducers.actions
+export const { increment } = reducers.actions;
 
-export default reducers.reducer
+export default reducers.reducer;
